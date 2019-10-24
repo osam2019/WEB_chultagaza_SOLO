@@ -1,24 +1,21 @@
-# untitled
+﻿# 이번 출타는 어디로 갈까?
+목적
 
-## Project setup
-```
-npm install
-```
+출타를 나갈 때 마다 모르는 장소는 길찾기를 해서 확인해 보는데 볼 때마다 다시 검색해야 되는 번거로움이 있어
+길찾기한 장소를 저장해서 교통정보 등 가려는 곳의 정보를 빠르게 확인 할 수 있게 하는 것이 주 목적이다.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+주요 기능
 
-### Lints and fixes files
-```
-npm run lint
-```
+- 지도 검색을 통해 마음에 드는 장소를 고른다.
+- 고른 장소는 콤보박스에 저장되고 다음 페이지에서 볼 수 있다.
+- 출발지와 도착지를 콤보박스로 고르고 길찾기를 하여 교통정보와 소요시간을 확인 할 수있다.
+- 마음에 들면 출타 나가는 날짜를 입력해 저장하고
+- 나의 일정 페이지에서 날짜를 누르면 내가 갈 장소의 정보를 확인 할 수 있다.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+날짜
+- 국방부오픈소스아카데미 19.10.24
+
+
+
+
