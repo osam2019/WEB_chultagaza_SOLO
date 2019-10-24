@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #place {
+            margin: 10px 10px 20px 41%;
+        }
+
+        .place {
+            margin-left: 37%;
+            margin-top: 15px;
+        }
+        .myButton {
+            box-shadow: 3px 4px 0px 0px #899599;
+            background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+            background-color:#ededed;
+            border-radius:15px;
+            border:1px solid #d6bcd6;
+            display:inline-block;
+            cursor:pointer;
+            color:#3a8a9e;
+            font-family:Arial;
+            font-size:15px;
+            padding:7px 25px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #e1e2ed;
+        }
+        .myButton:hover {
+            background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+            background-color:#bab1ba;
+        }
+        .myButton:active {
+            position:relative;
+            top:1px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h2 style="text-align: center"> 여기로 가볼까?</h2>
+</header>
+<div id="place">
+    <div style="margin-bottom: 10px">
+        <select id="place1" style="width: 300px; height: 25px;">
+            <option value="1">계산동 맛집</option>
+        </select>
+        <button type="button" class="myButton">출발</button>
+    </div>
+    <div>
+        <select id="place2" style="width:300px; height: 25px">
+            <option value="1">박촌동 맛집</option>
+        </select>
+        <button type="button" class="myButton">도착</button>
+    </div>
+</div>
+<div id="map" style="width:500px;height:400px;margin: auto;"></div>
+<div class="place">
+    <button type="button" class="myButton">길찾기</button>
+    <input type="text" style="width:100px; height:20px; margin-left: 30px">
+    <button type="submit" class="myButton" style="margin-left: 1px">이 날에 가야지</button>
+    <a href="index.html">
+        <button type="button" class="myButton">Home</button>
+    </a>
+    <a href="Myplan.html">
+        <button type="button" class="myButton">나의 일정</button>
+    </a>
+</div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fda4a276d6cf860c80b605df9a7c5ff2"></script>
+<script>
+
+
+    var container = document.getElementById('map');
+    var options = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667),
+        level: 3
+    };
+
+    function inputGetValue() {
+        var input = document.getElementById("input").value;
+        temp = input;
+    }
+
+    var map = new kakao.maps.Map(container, options);
+
+
+</script>
+</body>
+</html>

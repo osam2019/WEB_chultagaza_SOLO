@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>나가 보자고</title>
+    <style>
+        .myButton {
+            box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+            background:linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+            background-color:#fc8d83;
+            border-radius:6px;
+            border:1px solid #d83526;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:15px;
+            font-weight:bold;
+            padding:6px 24px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #b23e35;
+        }
+        .myButton:hover {
+            background:linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+            background-color:#e4685d;
+        }
+        .myButton:active {
+            position:relative;
+            top:1px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h2 style="text-align: center"> 이번엔 어디로 가볼까?</h2>
+
+</header>
+
+<div class="map_wrap">
+    <div id="menu_wrap" class="bg_white">
+        <div class="option">
+            <div style="text-align:center">
+                <form onsubmit="searchPlaces(); return false;">
+                    장소 검색 : <div class="box_searchbar">
+                    <input type="text" id="search.keyword.query" name="q" class="query tf_keyword bg_on" maxlength="100" autocomplete="off" accesskey="s">
+                    <button type="button" id="search.keyword.submit" class="myButton">검색</button>
+                </div>
+
+                </form>
+            </div>
+        </div>
+
+        <ul id="placesList"></ul>
+        <div id="pagination"></div>
+        <div id="map" style="width:500px;height:400px;margin: auto;"></div>
+    </div>
+</div>
+<div style="text-align: center; margin-top: 20px">
+    <button type="submit"; id="place" class="myButton">여기로 갈까?</button>
+    <a href="Myplan.html">
+        <button type="button" class="myButton">나의 일정</button>
+    </a>
+
+    <a href="page1.html">
+        <button type="button" class="myButton">골라볼까</button>
+    </a>
+</div>
+<footer></footer>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fda4a276d6cf860c80b605df9a7c5ff2"></script>
+<script>
+
+
+    var container = document.getElementById('map');
+    var options = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667),
+        level: 3
+    };
+
+    function inputGetValue() {
+        var input = document.getElementById("input").value;
+        temp = input;
+    }
+
+    var map = new kakao.maps.Map(container, options);
+
+
+</script>
+
+</body>
+</html>
